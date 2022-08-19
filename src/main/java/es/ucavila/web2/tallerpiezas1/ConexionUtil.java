@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 public class ConexionUtil {
     
     Connection cn;
-    String url=  "jdbc:mysql://localhost:3306/dbacademia?verifyServerCertificate=false&amp;useSSL=false";
+    String url=  "jdbc:mysql://localhost:3306/empresapiezas?verifyServerCertificate=false&amp;useSSL=false";
     String drv=  "com.mysql.cj.jdbc.Driver";
     String user= "root";
     String pass= "root";

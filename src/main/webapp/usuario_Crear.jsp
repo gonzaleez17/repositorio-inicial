@@ -30,10 +30,10 @@
 
                 <!-- Pestaña desplegable tipo usuario -->
                 <s:select label="Tipo Usuario" name="tipo"
-                          list="{'Alumno','Profesor','Administrador'}"
+                          list="{'Cliente','Trabajadores','Administrador'}"
                           headerKey="-1"
                           emptyOption="false"
-                          value="Alumno" /></td>
+                          value="Cliente" /></td>
 
 
                 <!--Datepicker Personalizado con formato Español + meses y años seleccionables -->
