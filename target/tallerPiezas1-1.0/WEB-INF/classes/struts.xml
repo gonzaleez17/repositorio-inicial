@@ -1,0 +1,50 @@
+<!DOCTYPE struts PUBLIC
+     "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+     "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+    
+        <!-- Login  -->      
+        <action name="validar" class="es.ucavila.web2.tallerpiezas1.PoolAction">
+            <result name="input">index.jsp</result>
+            <result name="login">menu_Admin.jsp</result>
+            <result name="success">menu_Profe.jsp</result>
+            <result name="none">menu_Alumn.jsp</result>
+        </action> 
+         <action name="listadoUser" class="es.ucavila.web2.tallerpiezas1.UserListAction">
+            <result name="success">listado_usuarios.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>   
+        
+        <!-- Crear un usuario -->
+        <action name="user_crear" class="es.ucavila.web2.tallerpiezas1.UserAction_Crear">
+            <result name="success">usuario_Ok.jsp</result>
+            <result name="error">usuario_Crear.jsp</result>
+        </action>
+        
+        <!-- Borrar un usuario -->
+        <action name="user_borrar" class="es.ucavila.web2.tallerpiezas1.UserAction_Borrar">
+            <result name="success">menu_Admin.jsp</result>
+        </action>
+        
+        <!-- Buscar un usuario -->
+        <action name="user_search" class="es.ucavila.web2.tallerpiezas1.UserAction_Buscar">
+            <result name="success">usuario_Editar.jsp</result>
+            <result name="error">usuario_Buscar.jsp</result>
+        </action>
+        
+        <!-- Editar un usuario -->
+        <action name="user_edit" class="es.ucavila.web2.tallerpiezas1.UserAction_Editar">
+            <result name="success">menu_Admin.jsp</result>
+        </action>   
+        <action name="listadoUser" class="es.ucavila.web2.tallerpiezas1.UserListAction">
+            <result name="success">listado_usuarios.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>   
+        
+        <!-- Crear un usuario -->
+        
+       
+    </package>  
+</struts>
+
