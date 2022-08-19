@@ -78,9 +78,10 @@ public class UserAction_Buscar extends ActionSupport {
     /**
      *
      * @return
+     * @throws java.lang.Exception
      */
     @Override
-    public String execute() {
+    public String execute() throws Exception {
 
         try {
             ConexionUtil con = new ConexionUtil();

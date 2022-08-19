@@ -5,6 +5,7 @@ package es.ucavila.web2.tallerpiezas1;
 import static com.opensymphony.xwork2.Action.SUCCESS;
     import com.opensymphony.xwork2.ActionSupport;
     import java.util.List;
+    import java.util.ArrayList;
 
 /**
  *
@@ -12,26 +13,16 @@ import static com.opensymphony.xwork2.Action.SUCCESS;
  */
 public class UserListAction extends ActionSupport {
            
-    private UserListDAO userDAO;// Inyectado por Spring
-    private List<Usuario> usuarios;
+    private ArrayList<Usuario> usuarios;
 
-    public UserListAction() {
+    public UserListAction() throws Exception {
+        UsuarioDAO usuario=new UsuarioDAO();
+        usuarios=usuario.devolver();
+            }
+
+    public UserListAction(ArrayList<Usuario> listadoUsuarios) {
+        this.usuarios = listadoUsuarios;
     }
-
-    public UserListAction(UserListDAO userDAO, List<Usuario> usuarios) {
-        this.userDAO = userDAO;
-        this.usuarios = usuarios;
-    }
-
-       
-    public UserListDAO getUserDAO() {
-        return userDAO;
-    }
-
-    public void setUserDAO(UserListDAO userDAO) {
-        this.userDAO = userDAO;
-    }
-
 
  
     /**
@@ -46,17 +37,10 @@ public class UserListAction extends ActionSupport {
      *
      * @param usuarios
      */
-    public void setUsuarios(List<Usuario> usuarios) {
+    public void setUsuarios(ArrayList<Usuario> usuarios) {
             this.usuarios = usuarios;
         }
 
-    /**
-     *
-     * @param l
-     */
-    public void setListadoDAO(UserListDAO l) {
-            userDAO = l;
-        }
 
     /**
      *
@@ -65,7 +49,7 @@ public class UserListAction extends ActionSupport {
      */
     @Override
 	public String execute() throws Exception {
-          //  usuarios = userDAO.listado();
+            this.usuarios=new UsuarioDAO().devolver();
             return SUCCESS;
 	}
     }

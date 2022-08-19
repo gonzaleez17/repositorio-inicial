@@ -50,9 +50,10 @@ public class PiezaDAO extends ActionSupport {
      * @param marca
      * @param modelo
      * @param numeroPiezas
+     * @throws java.lang.Exception
      *      */
     public void crear(String nombrePieza, String tipoPieza, String descripcionPieza,
-           String marca, String modelo, String numeroPiezas) {
+           String marca, String modelo, String numeroPiezas) throws Exception {
 
         try {
             ConexionUtil con = new ConexionUtil();
@@ -83,9 +84,10 @@ public class PiezaDAO extends ActionSupport {
      * @param modelo    
      * @param numeroPiezas    
      * @param idPieza    
+     * @throws java.lang.Exception    
      */
     public void editar(String nombrePieza, String tipoPieza, String descripcionPieza,
-           String marca, String modelo, String numeroPiezas,int idPieza) {
+           String marca, String modelo, String numeroPiezas,int idPieza) throws Exception {
 
         try {
             ConexionUtil con = new ConexionUtil();
@@ -109,9 +111,9 @@ public class PiezaDAO extends ActionSupport {
     /**
      *
      * @param id
-     * @param nif
+     * @throws java.lang.Exception
      */
-    public void borrar(int id) {
+    public void borrar(int id) throws Exception {
         try {
             ConexionUtil con = new ConexionUtil();
             Connection access = con.getConnection();
@@ -129,10 +131,11 @@ public class PiezaDAO extends ActionSupport {
 
     /**
      *
-     * @param nif
+     * @param id
      * @return
+     * @throws java.lang.Exception
      */
-    public Pieza buscar(int id) {
+    public Pieza buscar(int id) throws Exception {
 
         pieza = new Pieza();
 

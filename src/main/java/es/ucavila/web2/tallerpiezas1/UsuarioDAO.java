@@ -1,6 +1,6 @@
 package es.ucavila.web2.tallerpiezas1;
 
-
+import java.util.ArrayList;
 import com.opensymphony.xwork2.ActionSupport;
 import java.awt.HeadlessException;
 import java.sql.Connection;
@@ -70,7 +70,7 @@ public class UsuarioDAO extends ActionSupport {
      * @param nombre_usuario
      * @param password
      */
-    public void crear(String nif, String nombre, String apellidos, String movil, String email, String fecha_nacimiento, String tipo, String nombre_usuario, String password) {
+    public void crear(String nif, String nombre, String apellidos, String movil, String email, String fecha_nacimiento, String tipo, String nombre_usuario, String password) throws Exception {
 
         try {
             ConexionUtil con = new ConexionUtil();
@@ -106,7 +106,7 @@ public class UsuarioDAO extends ActionSupport {
      * @param id
      * @param nombre_usuario
      */
-    public void editar(String nif, String nombre, String apellidos, String movil, String email, String fecha_nacimiento, String tipo, String password,int id, String nombre_usuario) {
+    public void editar(String nif, String nombre, String apellidos, String movil, String email, String fecha_nacimiento, String tipo, String password,int id, String nombre_usuario) throws Exception {
 
         try {
             ConexionUtil con = new ConexionUtil();
@@ -129,8 +129,9 @@ public class UsuarioDAO extends ActionSupport {
     /**
      *
      * @param nif
+     * @throws java.lang.Exception
      */
-    public void borrar(String nif) {
+    public void borrar(String nif) throws Exception {
         try {
             ConexionUtil con = new ConexionUtil();
             Connection access = con.getConnection();
@@ -150,9 +151,10 @@ public class UsuarioDAO extends ActionSupport {
      *
      * @param nif
      * @return
+     * @throws java.lang.Exception
      */
-    public Usuario buscar(String nif) {
-
+    public Usuario buscar(String nif) throws Exception {
+        
         usuario = new Usuario();
 
         try {
@@ -193,5 +195,45 @@ public class UsuarioDAO extends ActionSupport {
         }
      
          return usuario;
+    }
+    public  ArrayList<Usuario> devolver() throws Exception {
+        ArrayList<Usuario> usuarios= new ArrayList();
+        usuario = new Usuario();
+
+        try {
+            ConexionUtil con = new ConexionUtil();
+            try (Connection access = con.getConnection()) {
+                Statement s = access.createStatement();
+                
+                String queryNif = "select * from usuarios";
+                ResultSet rs = s.executeQuery(queryNif);
+                
+                //Comprobamos si existe previamente el NIF introducido
+                while (rs.next()) {
+                    
+                    //Cargamos el objecto con los datos de la busqueda.
+                    usuario.setId(rs.getInt("id"));
+                    usuario.setNif(rs.getString("nif"));
+                    usuario.setNombre(rs.getString("nombre"));
+                    usuario.setApellidos(rs.getString("apellidos"));
+                    usuario.setMovil(rs.getString("movil"));
+                    usuario.setEmail(rs.getString("email"));
+                    usuario.setFecha_nacimiento(rs.getString("fecha_nacimiento"));
+                    usuario.setNombre_usuario(rs.getString("nombre_usuario"));
+                    usuario.setPassword(rs.getString("password"));
+                    usuarios.add(usuario);
+                    
+                } //Comprobamos si existe o no el nombre de usuario
+                rs.close();
+                s.close();
+            }
+
+        } catch (HeadlessException | SQLException e) {
+
+            JOptionPane.showMessageDialog(null, "Error en la busqueda: " + e, "ERROR", JOptionPane.ERROR_MESSAGE);
+
+        }
+         usuarios.forEach(usuario-> System.out.println(usuario.toString()));
+         return usuarios;
     }
 }

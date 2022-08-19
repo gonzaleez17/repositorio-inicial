@@ -6,19 +6,14 @@
     <html>
         <head>
             <title>Lista de Usuarios [Hibernate Spring Struts2]</title>
-            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-            <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
-          <!--  <script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
-            <script src="ccs/jquery.min.js"></script>
+            <script src="ccs/jquery.min.js" type="text/javascript"></script>
+            <script src="ccs/jquery.dataTables.js" type="text/javascript"></script>
+            <link href="ccs/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
             <link rel="stylesheet" type="text/css" href="ccs/listados.css"/> 
             <link rel="stylesheet" type="text/css" href="ccs/estilo_admin.css"/>
 
-             <script>
-                    $(document).ready(function() {
-                    $('#tabla').DataTable();                     
-                } );
-            </script>
+           
         </head>
         <body>
             <h1>Lista de Uuarios</h1>
@@ -56,6 +51,11 @@
             </table> 
              </fieldset>
             <a href="menu_Admin.jsp" align="center"> <img alt="" src="img/icono_devolver.png" width="80" height="80" align="center"/></a>
+          <script>
+                    $(document).ready(function() {
+                    $('#tabla').DataTable();                     
+                } );
+            </script>
         </body>
     </html>
 

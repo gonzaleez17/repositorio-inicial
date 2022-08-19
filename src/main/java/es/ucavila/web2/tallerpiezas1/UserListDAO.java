@@ -1,6 +1,8 @@
 package es.ucavila.web2.tallerpiezas1;
 
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.*;
 
 
@@ -17,10 +19,18 @@ public class UserListDAO {
      */
     public UserListDAO() {
     }
-
+/**
     public void listado() throws Exception {
-//        Connection conn=ConexionUtil.getConexion();
-        /**Configuration conf = new Configuration().configure();
+            ConexionUtil con = new ConexionUtil();
+            Connection access = con.getConnection();
+
+            String sql = "SELECT * FROM USUARIOS INTO usuarios (nif, nombre, apellidos, movil, email, fecha_nacimiento, tipo, nombre_usuario, password) "
+                    + "                 VALUES ('" + nif + "','" + nombre + "','" + apellidos + "','" + movil + "','" + email + "','" + fecha_nacimiento + "','" + tipo + "','" + nombre_usuario + "','" + password + "')";
+
+            PreparedStatement pstm = access.prepareStatement(sql);
+            pstm.executeUpdate();       Connection conn=ConexionUtil.getConexion();
+           
+  Configuration conf = new Configuration().configure();
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(conf.getProperties());
 
         SessionFactory factory = conf.buildSessionFactory(builder.build());
@@ -43,6 +53,6 @@ public class UserListDAO {
             session.close();
         }
         System.out.println(usuarios.size());
-        return usuarios;*/
-    }
+        return usuarios;
+    }*/
 }
