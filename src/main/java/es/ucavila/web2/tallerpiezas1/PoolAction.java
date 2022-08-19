@@ -128,8 +128,8 @@ public class PoolAction extends ActionSupport implements SessionAware {
     public String execute() throws Exception {
         boolean acceso = false;
         boolean esAdmin = false;
-        boolean esAlumn = false;
-        boolean esProfe = false;
+        boolean esTraba = false;
+        boolean esClien = false;
         String miNif, nombre, apellidos;
         int myid;
 
@@ -161,11 +161,11 @@ public class PoolAction extends ActionSupport implements SessionAware {
                     case "Administrador":
                         esAdmin = true;  //LOGIN
                         break;
-                    case "Profesor":
-                        esProfe = true; //SUCCESS
+                    case "Trabajadores":
+                        esTraba = true; //SUCCESS
                         break;
-                    case "Alumno":
-                        esAlumn = true; //NONE
+                    case "Cliente":
+                        esClien = true; //NONE
                         break;
                     default:
                         acceso = false;
@@ -185,14 +185,14 @@ public class PoolAction extends ActionSupport implements SessionAware {
                 sesion.put("nombre", nombre);
                 sesion.put("apellidos", apellidos);
                 return LOGIN;
-            } else if (acceso & esProfe) {
+            } else if (acceso & esTraba) {
                 sesion.put("usuario", usuario);
                 sesion.put("usernif", miNif);
                 sesion.put("userid", myid);
                 sesion.put("nombre", nombre);
                 sesion.put("apellidos", apellidos);
                 return SUCCESS;
-            } else if (acceso & esAlumn) {
+            } else if (acceso & esClien) {
                 sesion.put("usuario", usuario);
                 sesion.put("usernif", miNif);
                 sesion.put("userid", myid);

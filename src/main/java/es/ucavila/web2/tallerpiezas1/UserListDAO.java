@@ -4,6 +4,7 @@ package es.ucavila.web2.tallerpiezas1;
 import java.util.*;
 
 
+
 /**
  *
  * @author Antonio
@@ -18,6 +19,7 @@ public class UserListDAO {
     }
 
     public void listado() throws Exception {
+//        Connection conn=ConexionUtil.getConexion();
         /**Configuration conf = new Configuration().configure();
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(conf.getProperties());
 
