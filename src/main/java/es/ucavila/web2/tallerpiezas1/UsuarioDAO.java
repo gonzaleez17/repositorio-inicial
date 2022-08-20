@@ -221,7 +221,7 @@ public class UsuarioDAO extends ActionSupport {
                     usuario.setFecha_nacimiento(rs.getString("fecha_nacimiento"));
                     usuario.setNombre_usuario(rs.getString("nombre_usuario"));
                     usuario.setPassword(rs.getString("password"));
-                    usuarios.add(usuario);
+                    usuarios.add(new Usuario(usuario));
                     
                 } //Comprobamos si existe o no el nombre de usuario
                 rs.close();
@@ -233,7 +233,6 @@ public class UsuarioDAO extends ActionSupport {
             JOptionPane.showMessageDialog(null, "Error en la busqueda: " + e, "ERROR", JOptionPane.ERROR_MESSAGE);
 
         }
-         usuarios.forEach(usuario-> System.out.println(usuario.toString()));
-         return usuarios;
+        return usuarios;
     }
 }

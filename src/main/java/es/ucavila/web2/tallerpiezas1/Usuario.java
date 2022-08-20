@@ -38,7 +38,8 @@ public class Usuario {
      * @param nombre_usuario
      * @param password
      */
-    public Usuario(int id, String nif, String nombre, String apellidos, String movil, String email, String fecha_nacimiento, String tipo, String nombre_usuario, String password) {
+    
+        public Usuario(int id, String nif, String nombre, String apellidos, String movil, String email, String fecha_nacimiento, String tipo, String nombre_usuario, String password) {
         this.id = id;
         this.nif = nif;
         this.nombre = nombre;
@@ -49,6 +50,20 @@ public class Usuario {
         this.nombre_usuario = nombre_usuario;
         this.password = password;
         this.tipo = tipo;
+    }
+    
+    public Usuario(Usuario nuevo){
+        this.id = nuevo.id;
+        this.nif = nuevo.nif;
+        this.nombre = nuevo.nombre;
+        this.apellidos = nuevo.apellidos;
+        this.movil = nuevo.movil;
+        this.email = nuevo.email;
+        this.fecha_nacimiento = nuevo.fecha_nacimiento;
+        this.nombre_usuario = nuevo.nombre_usuario;
+        this.password = nuevo.password;
+        this.tipo = nuevo.tipo;
+        
     }
 
 //Métodos Getter

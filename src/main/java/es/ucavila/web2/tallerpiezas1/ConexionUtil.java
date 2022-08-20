@@ -5,7 +5,6 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -32,7 +31,7 @@ public class ConexionUtil {
             throw new Exception("Error en context");
         }
         DataSource dataSource = (DataSource) ctx.lookup("java:comp/env/jdbc/empresapiezas");
-        cn = dataSource.getConnection();
+        this.cn = dataSource.getConnection();
         return cn;
 
     }

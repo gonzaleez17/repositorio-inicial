@@ -137,7 +137,7 @@ public class PoolAction extends ActionSupport implements SessionAware {
         if (ctx == null) {
             throw new Exception("Error en context");
         }
-        dataSource = (DataSource) ctx.lookup("java:comp/env/jdbc/dbacademia");
+        dataSource = (DataSource) ctx.lookup("java:comp/env/jdbc/empresapiezas");
         conn = dataSource.getConnection();
         Statement s = conn.createStatement();
 

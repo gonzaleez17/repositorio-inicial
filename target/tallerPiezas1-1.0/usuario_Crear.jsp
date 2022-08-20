@@ -4,11 +4,11 @@
 
 <html>
     <head>
-       	<link rel="stylesheet" type="text/css" href="ccs/estilo_admin.css" />
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+         <script src="ccs/jquery.min.js" type="text/javascript"></script>
+            <script src="ccs/jquery.dataTables.js" type="text/javascript"></script>
+            <link href="ccs/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+            <link rel="stylesheet" type="text/css" href="ccs/listados.css"/> 
+            <link rel="stylesheet" type="text/css" href="ccs/estilo_admin.css"/>
     <br>
     <title>Nuevo Usuario</title>
 </head>

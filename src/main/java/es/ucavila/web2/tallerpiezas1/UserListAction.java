@@ -12,17 +12,19 @@ import static com.opensymphony.xwork2.Action.SUCCESS;
  * @author Antonio
  */
 public class UserListAction extends ActionSupport {
-           
+    UsuarioDAO usuario;        
     private ArrayList<Usuario> usuarios;
 
     public UserListAction() throws Exception {
-        UsuarioDAO usuario=new UsuarioDAO();
-        usuarios=usuario.devolver();
-            }
-
-    public UserListAction(ArrayList<Usuario> listadoUsuarios) {
-        this.usuarios = listadoUsuarios;
+        usuario=new UsuarioDAO();
+        this.usuarios = usuario.devolver();
     }
+    
+     public UserListAction(UsuarioDAO usuario, ArrayList<Usuario> usuarios) throws Exception {
+        this.usuario=usuario;
+        this.usuarios = usuarios;
+    }
+    
 
  
     /**
@@ -49,7 +51,7 @@ public class UserListAction extends ActionSupport {
      */
     @Override
 	public String execute() throws Exception {
-            this.usuarios=new UsuarioDAO().devolver();
+            this.usuarios=usuario.devolver();
             return SUCCESS;
 	}
     }

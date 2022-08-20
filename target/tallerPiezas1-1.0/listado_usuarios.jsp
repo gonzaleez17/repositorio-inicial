@@ -2,18 +2,25 @@
 
     <%@page contentType="text/html" pageEncoding="UTF-8"%>
     <%@ taglib prefix="s" uri="/struts-tags" %>
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//ES""http://www.w3.org/TR/html4/loose.dtd">
+    <!DOCTYPE html>
     <html>
         <head>
-            <title>Lista de Usuarios [Hibernate Spring Struts2]</title>
+            <title>Lista de Usuarios </title>
 
-            <script src="ccs/jquery.min.js" type="text/javascript"></script>
-            <script src="ccs/jquery.dataTables.js" type="text/javascript"></script>
-            <link href="ccs/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+     <script
+         src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
+            <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
             <link rel="stylesheet" type="text/css" href="ccs/listados.css"/> 
             <link rel="stylesheet" type="text/css" href="ccs/estilo_admin.css"/>
 
-           
+            <script>
+                $(document).ready( function () {
+    $('#tabla').DataTable();
+} );
+             </script>
         </head>
         <body>
             <h1>Lista de Uuarios</h1>
@@ -51,11 +58,7 @@
             </table> 
              </fieldset>
             <a href="menu_Admin.jsp" align="center"> <img alt="" src="img/icono_devolver.png" width="80" height="80" align="center"/></a>
-          <script>
-                    $(document).ready(function() {
-                    $('#tabla').DataTable();                     
-                } );
-            </script>
+   
         </body>
     </html>
 

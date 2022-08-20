@@ -215,7 +215,7 @@ public class UserAction_Crear extends ActionSupport {
      */
     @Override
     public String execute() throws Exception {
-
+        dao=new UsuarioDAO();
         if (checkInsert()) {
 
             try {
@@ -258,7 +258,6 @@ public class UserAction_Crear extends ActionSupport {
             ConexionUtil con = new ConexionUtil();
             Connection access = con.getConnection();
             Statement s = access.createStatement();
-
             String queryNif = "select * from usuarios where nif='" + this.getNif() + "'";
             ResultSet rs = s.executeQuery(queryNif);
 
@@ -280,7 +279,7 @@ public class UserAction_Crear extends ActionSupport {
 
             } //Comprobamos si existe o no el nombre de usuario
             else {
-                String userName = "select * from usuarios where " + "nombre_usuario='" + nombre_usuario + "'";
+                String userName = "select * from usuarios where " + "nombre='" + nombre_usuario + "'";
                 ResultSet rs2 = s.executeQuery(userName);
 
                 //Si existe ya un nombre de usuario igual, creamos otro nuevo (this.getNombreUsuario().equals(rs2.getString("nombre_usuario"))

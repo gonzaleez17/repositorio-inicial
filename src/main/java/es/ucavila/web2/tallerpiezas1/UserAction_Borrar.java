@@ -26,6 +26,7 @@ public class UserAction_Borrar extends ActionSupport{
     private UsuarioDAO dao; //Inyecto
 
     public UserAction_Borrar() {
+        dao=new UsuarioDAO();
     }
 
  
@@ -70,7 +71,6 @@ public class UserAction_Borrar extends ActionSupport{
      */
     @Override
     public String execute()throws Exception{    
-          dao=new UsuarioDAO();
           //Llamamos a nuestro objeto inyectado DAO_del y realizamos el borrado
           dao.borrar(nif);
           return SUCCESS;

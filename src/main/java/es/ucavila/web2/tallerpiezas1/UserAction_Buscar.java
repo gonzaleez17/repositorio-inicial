@@ -23,6 +23,9 @@ public class UserAction_Buscar extends ActionSupport {
     private Usuario user; //Inyecto Spring
 
     public UserAction_Buscar() {
+        nif=null;
+        dao = new UsuarioDAO();
+        user = n;
     }
 
    
