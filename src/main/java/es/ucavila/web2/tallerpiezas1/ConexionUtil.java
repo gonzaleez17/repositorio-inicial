@@ -13,7 +13,7 @@ import javax.sql.DataSource;
  */
 /**
  *
- * @author jose
+ * @author José Flores
  */
 public class ConexionUtil {
 

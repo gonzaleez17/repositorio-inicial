@@ -6,7 +6,6 @@ es\ucavila\web2\tallerpiezas1\UserListAction.class
 es\ucavila\web2\tallerpiezas1\UserAction_Crear.class
 es\ucavila\web2\tallerpiezas1\UserListDAO.class
 es\ucavila\web2\tallerpiezas1\UsuarioDAO.class
-es\ucavila\web2\tallerpiezas1\UserAction_Buscar.class
 es\ucavila\web2\tallerpiezas1\ConexionUtil.class
 es\ucavila\web2\tallerpiezas1\PiezaDAO.class
 es\ucavila\web2\tallerpiezas1\PoolAction.class

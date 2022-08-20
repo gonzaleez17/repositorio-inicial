@@ -9,10 +9,10 @@
         <action name="validar" class="es.ucavila.web2.tallerpiezas1.PoolAction">
             <result name="input">index.jsp</result>
             <result name="login">menu_Admin.jsp</result>
-            <result name="success">menu_Profe.jsp</result>
+            <result name="success">menu_Empleado.jsp</result>
             <result name="none">menu_Alumn.jsp</result>
         </action> 
-         <action name="listadoUser" class="es.ucavila.web2.tallerpiezas1.UserListAction">
+        <action name="listadoUser" class="es.ucavila.web2.tallerpiezas1.UserListAction">
             <result name="success">listado_usuarios.jsp</result>
             <result name="error">index.jsp</result>
         </action>   
@@ -43,7 +43,27 @@
             <result name="error">index.jsp</result>
         </action>   
         
-        <!-- Crear un usuario -->
+        <!-- Crear una pieza -->
+        
+        
+        <!-- Borrar una pieza -->
+        <action name="pieza_borrar" class="es.ucavila.web2.tallerpiezas1.PiezaAction_Borrar">
+            <result name="success">menu_Empleado.jsp</result>
+        </action>
+        
+        
+        <!-- Listar piezas -->
+        
+        
+        <!-- edita piezas -->
+        
+        
+        <!-- buscar una pieza -->
+        <action name="pieza_buscar" class="es.ucavila.web2.tallerpiezas1.PiezaAction_Buscar">
+            <result name="success">pieza_Editar.jsp</result>
+            <result name="error">pieza_Buscar.jsp</result>
+        </action>
+        
         
        
     </package>  

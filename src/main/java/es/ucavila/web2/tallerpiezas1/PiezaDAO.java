@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author Antonio
+ * @author José Flores
  */
 public class PiezaDAO extends ActionSupport {
 
@@ -53,7 +53,7 @@ public class PiezaDAO extends ActionSupport {
      * @throws java.lang.Exception
      *      */
     public void crear(String nombrePieza, String tipoPieza, String descripcionPieza,
-           String marca, String modelo, String numeroPiezas) throws Exception {
+           String marca, String modelo, int numeroPiezas) throws Exception {
 
         try {
             ConexionUtil con = new ConexionUtil();

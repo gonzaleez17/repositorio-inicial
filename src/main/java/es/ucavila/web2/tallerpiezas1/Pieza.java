@@ -6,7 +6,7 @@ package es.ucavila.web2.tallerpiezas1;
 
 /**
  *
- * @author gonza
+ * @author José Flores
  */
 public class Pieza {
     private int idPieza;

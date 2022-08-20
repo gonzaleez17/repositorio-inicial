@@ -25,7 +25,7 @@ public class UserAction_Buscar extends ActionSupport {
     public UserAction_Buscar() {
         nif=null;
         dao = new UsuarioDAO();
-        user = n;
+        user = new Usuario();
     }
 
    
