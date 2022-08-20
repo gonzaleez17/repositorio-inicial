@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+
 <% if (session.getAttribute("usuario") == null) {
         response.sendRedirect("index.jsp");
     }
@@ -17,17 +18,17 @@
         
         <br>
         <br>
-        <a href="<s:url action="pieza_borrar"/>" style="background-color:white"><img alt=""  width="90" height="130"/>Borrar pieza</a>
+        <a href="<s:url action="pieza_Borrar.jsp"/>" style="background-color:white"><img alt=""  width="90" height="130"/>Borrar pieza</a>
         <br>
         <br>
         <br>
         <br>
-        <a href="<s:url action="pieza_buscar"/>" style="background-color:white"/> <img alt=""  width="150" height="90"/>Buscar pieza</a>
+        <a href="<s:url action="pieza_Buscar.jsp"/>" style="background-color:white"/> <img alt=""  width="150" height="90"/>Buscar pieza</a>
         <br>
         <br>
         <br>
         <br>
-        <!--     <a href="<s:url action="pieza_listar"/>" style="background-color:white"/> <img alt=""  width="150" height="90"/>Listar pieza</a>  -->
+        <a href="listado_piezas.jsp" style="background-color:white">Listado piezas jsp  </a> <img alt=""  width="150" height="90"/>Listar pieza</a>  
         <br>
         <br>
         <br><!-- comment --><!-- comment -->

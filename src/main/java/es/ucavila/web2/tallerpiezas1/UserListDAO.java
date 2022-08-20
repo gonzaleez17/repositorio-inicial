@@ -1,15 +1,14 @@
 package es.ucavila.web2.tallerpiezas1;
 
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.util.*;
 
 
 
 /**
  *
- * @author Antonio
+ * @author Jose
  */
 public class UserListDAO {
 
@@ -17,8 +16,8 @@ public class UserListDAO {
      *
      * @return @throws Exception
      */
-    public UserListDAO() {
-    }
+ 
+  
 /**
     public void listado() throws Exception {
             ConexionUtil con = new ConexionUtil();

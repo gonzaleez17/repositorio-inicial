@@ -17,6 +17,20 @@ public class Pieza {
     private String modelo;
     private int numeroPieza;
 
+    public Pieza(Pieza p) {
+    idPieza=p.getIdPieza();
+    nombrePieza=p.getNombrePieza();
+    tipoPieza=p.getTipoPieza();
+    descripcionPieza=p.getDescripcionPieza();
+    marca=p.getMarca();
+    modelo=p.getModelo();
+    numeroPieza=p.getNumeroPieza();
+    }
+    
+    public Pieza(){
+    
+    }
+
     /**
      * @return the idPieza
      */
