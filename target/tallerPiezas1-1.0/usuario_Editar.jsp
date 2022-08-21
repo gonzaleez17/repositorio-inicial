@@ -26,12 +26,12 @@
                 <s:textfield name="id" label="ID_MySQL [Solo Lectura]"  value="%{user.id}" readonly="true" style ="background-color:#fa5d57" size="9" />
                 <s:textfield name="usuario" label="Usuario [Solo Lectura]"  value="%{user.nombre_usuario}" readonly="true" style ="background-color:#fa5d57" size="9"/> 
                 <s:textfield name="nif" label="NIF [Solo Lectura]"  value="%{user.nif}" readonly="true" style ="background-color:#fa5d57" size="9" />
-                <s:div>
+                <div>
                     <s:textfield name="nombre" label="Nombre"  value="%{user.nombre}" required="true"/> 
                     <s:textfield name="apellidos" label="Apellidos" value="%{user.apellidos}" required="true" />           
                     <s:textfield name="movil" label="Móvil" value="%{user.movil}"/>  
-                    <s:textfield  name="email" label="E-Mail" maxlength="255" value="%{user.email}" required="true" />  
-                    <s:textfield  name="fecha_nacimiento" label="Fecha Nacimiento"  maxLength="10" id="fNacimiento" value="%{user.fecha_nacimiento}" required="true" />
+                    <s:textfield name="email" label="E-Mail" maxlength="255" value="%{user.email}" required="true" />  
+                    <s:textfield name="fecha_nacimiento" label="Fecha Nacimiento"  maxlength="10" id="fNacimiento" value="%{user.fecha_nacimiento}" required="true" />
                     <s:textfield name="password" label="Password" maxlength="9"  value="%{user.password}" required="true" />
 
 
@@ -70,7 +70,7 @@
                             $("#fNacimiento").datepicker();
                         });
                     </script>
-                </s:div>
+                </div>
                 <s:submit  value="Editar" align="center"/>
             </s:form>
             <br>

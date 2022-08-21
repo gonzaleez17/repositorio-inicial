@@ -41,16 +41,7 @@
             <br>
             <br>
 
-            <div style="text-align: center">
-                <a href="<s:url action="listadoAsig"/>"><img src="img/asignaturaList.png" width="100" height="120" title="Listado Asignaturas"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                <a href="asignatura_Crear.jsp"/> <img src="img/asignaturaCrear.png" width="100" height="120" title="Crear Clase"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                <a href="asignatura_Borrar.jsp"/> <img src="img/asignaturaBorrar.png" width="100" height="120" title="Borrar Clase"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                <a href="asignatura_Buscar.jsp"/> <img src="img/asignaturaBuscarEdit.png" width="100" height="120" title="Buscar Editar Clase"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-            </div>
-        </fieldset>
+                  </fieldset>
         <br>
         <br>
         <br>

@@ -26,9 +26,11 @@ public class UserAction_Editar extends ActionSupport{
     private String nombre_usuario;
     private int id;
     
-    private UsuarioDAO dao; //Inyecto
+    private UsuarioDAO dao; 
 
     public UserAction_Editar() {
+        dao=new UsuarioDAO();
+    
     }
  
 
@@ -216,7 +218,7 @@ public class UserAction_Editar extends ActionSupport{
      */
     @Override
     public String execute()throws Exception{    
-          
+          dao=new UsuarioDAO();
           //Llamamos a nuestro objeto inyectado DAO_del y realizamos el borrado
           dao.editar(nif, nombre, apellidos, movil, email, fecha_nacimiento, tipo, password, id,nombre_usuario);
           return SUCCESS;

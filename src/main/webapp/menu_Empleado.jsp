@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="ccs/estilo_Profe.css"/>
+        <link rel="stylesheet" type="text/css" href="ccs/estilo_trabaja.css"/>
         <title>EMPRESA DE REPUESTOS - PORTAL EMPLEADO</title>
     </head>
     <body>

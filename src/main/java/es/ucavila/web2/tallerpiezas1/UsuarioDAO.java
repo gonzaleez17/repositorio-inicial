@@ -116,10 +116,10 @@ public class UsuarioDAO extends ActionSupport {
         
             PreparedStatement pstm = access.prepareStatement(sql);
             pstm.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Datos Actualizados Correctamente");
+            //JOptionPane.showMessageDialog(null, "Datos Actualizados Correctamente");
 
         } catch (HeadlessException | SQLException e) {
-            JOptionPane.showMessageDialog(null, "Actualizar Erroneo: " + e);
+            //JOptionPane.showMessageDialog(null, "Actualizar Erroneo: " + e);
         }
 
     }
@@ -183,14 +183,14 @@ public class UsuarioDAO extends ActionSupport {
             } //Comprobamos si existe o no el nombre de usuario
             else {
                 this.usuario=null;
-                JOptionPane.showMessageDialog(null, "No existe el usuario con NIF: " + nif, "Atención", JOptionPane.WARNING_MESSAGE);
+          //      JOptionPane.showMessageDialog(null, "No existe el usuario con NIF: " + nif, "Atención", JOptionPane.WARNING_MESSAGE);
             }
             s.close();
             access.close();
 
         } catch (HeadlessException | SQLException e) {
 
-            JOptionPane.showMessageDialog(null, "Error en la busqueda: " + e, "ERROR", JOptionPane.ERROR_MESSAGE);
+           // JOptionPane.showMessageDialog(null, "Error en la busqueda: " + e, "ERROR", JOptionPane.ERROR_MESSAGE);
 
         }
      
@@ -230,7 +230,7 @@ public class UsuarioDAO extends ActionSupport {
 
         } catch (HeadlessException | SQLException e) {
 
-            JOptionPane.showMessageDialog(null, "Error en la busqueda: " + e, "ERROR", JOptionPane.ERROR_MESSAGE);
+           // JOptionPane.showMessageDialog(null, "Error en la busqueda: " + e, "ERROR", JOptionPane.ERROR_MESSAGE);
 
         }
         return usuarios;

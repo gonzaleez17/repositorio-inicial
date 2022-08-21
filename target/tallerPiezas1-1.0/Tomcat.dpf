@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context path="/tallerPiezas1">
-  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" name="jdbc/empresapiezas" password="root" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/empresapiezas?verifyServerCertificate=false&amp;useSSL=false" username="root"/>
-</Context>
